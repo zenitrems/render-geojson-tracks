@@ -1,0 +1,21 @@
+
+# Instalación estándar
+#   pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+matplotlib>=3.8.0
+pandas>=2.1.0
+
+cartopy>=0.23.0          # proyecciones, capas Natural Earth, tiles OSM
+Shapely>=2.0.0           # geometrías vectoriales (dependencia de cartopy/geopandas)
+pyproj>=3.6.0            # transformaciones de coordenadas (dependencia de cartopy)
+
+# Datos vectoriales OSM
+geopandas>=1.0.0
+osmnx>=2.0.0
+
+# Datos raster / Natural Earth que cartopy descarga automáticamente
+# no requieren paquete extra, pero sí acceso a Internet en el primer uso.
+# Para entornos sin red pre-descarga con:
+#   python -c "import cartopy; cartopy.io.shapereader.natural_earth()"
